@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4287b0f-37b4-4a77-8e8e-4f4571290fa6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/frame/frame.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frame/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/player.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render/render.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/player/shot.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/player.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/player.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
   </component>
   <component name="RecentsManager">
@@ -78,6 +74,7 @@
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638119467550</updated>
       <workItem from="1638119471902" duration="2160000" />
+      <workItem from="1638122222587" duration="724000" />
     </task>
     <servers />
   </component>
@@ -104,5 +102,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
