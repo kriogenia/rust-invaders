@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4287b0f-37b4-4a77-8e8e-4f4571290fa6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/player/shot.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/invaders/invaders.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/invaders/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/frame.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/render/frame.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/mod.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player/player.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/player.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/shot.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/shot.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/render/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/render/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/render" />
       <recent name="$PROJECT_DIR$/src/frame" />
     </key>
   </component>
@@ -85,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638119467550</updated>
       <workItem from="1638119471902" duration="2160000" />
-      <workItem from="1638122222587" duration="724000" />
+      <workItem from="1638122222587" duration="2246000" />
     </task>
     <servers />
   </component>

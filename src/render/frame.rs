@@ -1,4 +1,4 @@
-use super::{ NUM_COLS, NUM_ROWS };
+use crate::render::{NUM_COLS, NUM_ROWS};
 
 pub type Frame = Vec<Vec<&'static str>>;
 

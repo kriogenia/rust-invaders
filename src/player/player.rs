@@ -1,6 +1,6 @@
 use std::time::Duration;
 use crate::Frame;
-use crate::frame::{Drawable, NUM_COLS, NUM_ROWS};
+use crate::render::{Drawable, NUM_COLS, NUM_ROWS};
 use crate::player::shot::Shot;
 
 const MAX_SHOTS: usize = 2;

@@ -1,7 +1,7 @@
 use std::time::Duration;
 use rusty_time::prelude::Timer;
 use crate::Frame;
-use crate::frame::Drawable;
+use crate::render::Drawable;
 
 pub struct Shot {
 	pub x: usize,

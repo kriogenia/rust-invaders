@@ -4,15 +4,14 @@ use core::time::Duration;
 use std::sync::mpsc;
 use std::time::Instant;
 use crossterm::event;
-use crossterm::event::{ Event, KeyCode };
+use crossterm::event::{Event, KeyCode};
 use crossterm::{ExecutableCommand, terminal};
 use crossterm::cursor::{Hide, Show};
 use crossterm::terminal::{EnterAlternateScreen, LeaveAlternateScreen};
 use rusty_audio::Audio;
-use invaders::{frame, Player, render};
-use invaders::frame::{Drawable, new_frame};
+use invaders::{Drawable, Invaders, new_frame, Player, render};
 
-fn main() -> Result<(), Box<dyn Error>>{
+fn main() -> Result<(), Box<dyn Error>> {
 	let mut audio = Audio::new();
 	audio.add("explode", "audio/explode.wav");
 	audio.add("lose", "audio/lose.wav");
@@ -31,7 +30,7 @@ fn main() -> Result<(), Box<dyn Error>>{
 	// Render loop thread
 	let (render_tx, render_rx) = mpsc::channel();
 	let render_handle = thread::spawn(move || {
-		let mut last_frame = frame::new_frame();
+		let mut last_frame = new_frame();
 		let mut stdout = io::stdout();
 		render::render(&mut stdout, &last_frame, &last_frame, true);
 
@@ -46,6 +45,8 @@ fn main() -> Result<(), Box<dyn Error>>{
 	});
 
 	let mut player = Player::new();
+	let mut invaders = Invaders::new();
+
 	let mut instant = Instant::now();
 
 	// Game loop thread
@@ -69,7 +70,7 @@ fn main() -> Result<(), Box<dyn Error>>{
 					KeyCode::Esc | KeyCode::Char('q') => {
 						audio.play("lose");
 						break 'gameloop;
-					},
+					}
 					_ => {}
 				}
 			}
@@ -77,9 +78,16 @@ fn main() -> Result<(), Box<dyn Error>>{
 
 		// Updates
 		player.update(delta);
+		if invaders.update(delta) {
+			audio.play("move");
+		}
 
 		// Draw & render
-		player.draw(&mut curr_frame);
+		let drawables: Vec<&dyn Drawable> = vec!(&player, &invaders);
+		for drawable in drawables {
+			drawable.draw(&mut curr_frame);
+		}
+
 		let _ = render_tx.send(curr_frame);
 		thread::sleep(Duration::from_millis(10));  // 100 fps
 	}
