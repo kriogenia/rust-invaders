@@ -1,6 +1,4 @@
 use std::cmp::max;
-use std::mem::transmute;
-use std::os::unix::raw::time_t;
 use std::time::Duration;
 use rusty_time::timer::Timer;
 use crate::{Drawable, Frame};
@@ -37,7 +35,7 @@ impl Invaders {
 	pub fn update(&mut self, delta: Duration) -> bool {
 		self.move_timer.update(delta);
 
-		if (self.move_timer.ready) {
+		if self.move_timer.ready {
 			self.move_timer.reset();
 
 			let mut downwards = false;
@@ -77,6 +75,24 @@ impl Invaders {
 
 		false
 	}
+
+	pub fn all_killed(&self) -> bool {
+		self.army.is_empty()
+	}
+
+	pub fn reached_bottom(&self) -> bool {
+		self.army.iter().map(|invader| invader.y).max().unwrap_or(0) >= NUM_ROWS - 1
+	}
+
+	pub fn kill_invader_at(&mut self, x: usize, y: usize) -> bool {
+		if let Some(i) = self.army.iter()
+			.position(|invader| invader.x == x && invader.y == y) {
+			self.army.remove(i);
+			return true;
+		}
+		false
+	}
+
 }
 
 impl Drawable for Invaders {
